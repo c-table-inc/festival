@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsuru's Jidai Matsuri & Free Art Museum!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+
+        header.hero {
+            /* Background image/video will be placed here */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/HEROセクション.jpg') no-repeat center center/cover;
+            color: #fff;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header.hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header.hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #e67e22;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #d35400;
+        }
+
+        section {
+            padding: 4rem 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .video-container {
+            margin: 2rem auto; /* Center the container and add vertical space */
+            width: 90%; /* Responsive width, balanced with sides */
+            max-width: 980px; /* Adjusted size for better balance */
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 5px; /* Consistent with other elements */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Add some depth */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .museum-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .museum-features img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .directions h3 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #e67e22; /* Theme color accent */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block; /* Border only spans the text width */
+        }
+
+        .directions ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .directions li {
+            background: #ffffff; /* Pure white background */
+            margin-bottom: 1rem; /* Increased spacing */
+            padding: 1.5rem; /* Increased padding */
+            border-radius: 5px;
+            border-left: 5px solid #e67e22; /* Theme color accent border */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .directions li:hover {
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Stronger shadow on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            header.hero h1 {
+                font-size: 2.5rem;
+            }
+            header.hero h2 {
+                font-size: 1.2rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+            .museum-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>On Your Way to Mt. Fuji?<br>See a Real Samurai Procession!</h1>
+        <h2>Just off the train to Mt. Fuji, see an authentic feudal lord's procession with real samurai armor. Then, discover a free art museum featuring a Hokusai masterpiece.</h2>
+        <a href="img/TOkyo改訂版.jpg" class="cta-button">See Map & Directions</a>
+    </header>
+
+    <main>
+        <section id="festival">
+            <div class="container">
+                <h2>Witness a Real Samurai Procession!</h2>
+                <div class="gallery">
+                    <img src="img/大名行列.jpg" alt="Daimyo Procession with a red umbrella">
+                    <img src="img/お姫様.jpg" alt="Princess in a beautiful kimono">
+                    <img src="img/夜.jpg" alt="Festival floats lit up at night">
+                </div>
+                <p><strong>On September 7th, step into the age of the samurai.</strong> The main event is the <strong>Daimyo Gyoretsu</strong>, a stunning recreation of a feudal lord's procession with warriors in authentic armor. And here's a special secret: one of the magnificent draperies you'll see on the festival floats, the <strong>"Tiger" drapery</strong>, was designed by the legendary artist <strong>Katsushika Hokusai</strong> himself!</p>
+                <div style="background-color: #fff5e6; border: 2px solid #e67e22; text-align: center; padding: 2rem; margin: 2rem 0; border-radius: 10px;">
+                    <h4 style="margin-top: 0; color: #333; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Daimyo Procession Schedule</h4>
+                    <p style="margin-bottom: 0.5rem; font-size: 2.2rem; font-weight: bold; color: #e67e22; margin-top: 1rem;">3:50 PM</p>
+                    <p style="margin-bottom: 0.5rem; font-size: 1.3rem; color: #555;"><strong>Date:</strong> September 7th</p>
+                    <p style="margin-bottom: 0; font-size: 1.3rem; color: #555;"><strong>Start Point:</strong> Museum Tsuru</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="museum">
+            <div class="container">
+                <h2>Discover a Cultural Treasure, Just a 5-Minute Walk from the Festival</h2>
+                <img src="img/IMG_9043.jpg" alt="Exterior of Museum Tsuru" style="width: 100%; border-radius: 5px; margin-bottom: 2rem;">
+                <div class="museum-features">
+                    <div>
+                        <p>After witnessing the powerful <strong>Daimyo Gyoretsu</strong>, step into Museum Tsuru to see the artifacts behind the spectacle. The centerpiece is the magnificent <strong>"Tiger" drapery</strong>, and here is the most amazing part: <strong>this is the authentic drapery that is still used in the town's festival today.</strong></p>
+                        <p>You are not just looking at a museum piece; you are seeing a living piece of history up close. The preliminary design for this powerful artwork was drawn by the legendary ukiyo-e master, <strong>Katsushika Hokusai</strong>, who signed it with his unique name, <em>"Gakyōjin Hokusai"</em> – The Man Mad About Art.</p>
+                        <p>This treasure is a testament to the town's prosperous past as a center for luxurious <em>Kaiki</em> silk weaving. The museum also holds <strong>Jomon period pottery</strong>, artifacts from Japan's prehistoric era.</p>
+                        <p>See the real, Hokusai-designed festival treasure up close, and explore centuries of history—all completely for <strong>free</strong> in a quiet, authentic setting.</p>
+                    </div>
+                    <div>
+                        <img src="img/北斎.jpg" alt="The 'Tiger' drapery designed by Hokusai">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <div class="container-wide">
+                <h2>Experience the Festival in Action</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rCev_dM3Qt0?si=TKfyiOFHuV0Y_B8_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="access">
+            <div class="container">
+                <h2>Easy to Access</h2>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=Museum%20Tsuru&t=&z=18&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="directions">
+                    <h3>Directions:</h3>
+                    <p style="text-align: center; font-size: 1.4rem; font-weight: bold; color: #e67e22; margin: 1.5rem 0;">Only 30 minutes from Kawaguchiko (Mt. Fuji Station)!</p>
+                    <ul>
+                        <li><strong>From Shinjuku/Tokyo:</strong> Take the JR Chuo Line to Otsuki Station, then transfer to the Fujikyu Line and get off at Tsurushi Station. (Approx. 90 mins)</li>
+                        <li><strong>From Kawaguchiko:</strong> Take the Fujikyu Line and get off at Tsurushi Station. (Approx. 25 mins)</li>
+                        <li><strong>From Tsurushi Station:</strong> The museum is a 3-minute walk. The festival area is also nearby.</li>
+                    </ul>
+                </div>
+                <div class="hours">
+                    <h3>Museum Hours:</h3>
+                    <p>9:00 AM - 4:30 PM</p>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                     <a href="https://www.google.com/maps" target="_blank" class="cta-button">Get Directions on Google Maps</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tsuru City Tourism Promotion. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
